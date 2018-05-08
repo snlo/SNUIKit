@@ -184,5 +184,20 @@ static id instanse;
 		_contentColor = [UIColor grayColor];
 	} return _contentColor;
 }
+- (UIColor *)hintColor {
+    if (!_hintColor) {
+        _hintColor = [UIColor redColor];
+    } return _hintColor;
+}
+- (UIColor *)mainColor {
+    if (!_mainColor) {
+        _mainColor = [UIColor blackColor];
+    } return _mainColor;
+}
+- (UIColor *)separatorColor {
+    if (!_separatorColor) {
+        _separatorColor = [UIColor grayColor];
+    } return _separatorColor;
+}
 
 @end

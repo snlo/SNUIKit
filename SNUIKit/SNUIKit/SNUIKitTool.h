@@ -21,10 +21,10 @@
 /**
  image about
  */
-#define IMAGE_NAMED(name) [UIImage imageNamed:name]
-#define IMAGE_PNG(name) UIImageMakeWithFileAndSuffix(name, @"png")
-#define IMAGE_JPG(name) UIImageMakeWithFileAndSuffix(name, @"jpg")
-#define UIImageMakeWithFileAndSuffix(name, suffix) [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.%@", [[NSBundle mainBundle] resourcePath], name, suffix]]
+#define SNUIKIT_IMAGE_NAMED(name) [UIImage imageNamed:name]
+#define SNUIKIT_IMAGE_PNG(name) UIImageMakeWithFileAndSuffix(name, @"png")
+#define SNUIKIT_IMAGE_JPG(name) UIImageMakeWithFileAndSuffix(name, @"jpg")
+#define SNUIKIT_UIImageMakeWithFileAndSuffix(name, suffix) [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@.%@", [[NSBundle mainBundle] resourcePath], name, suffix]]
 
 __attribute__((objc_subclassing_restricted))
 

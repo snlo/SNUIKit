@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import <Masonry.h>
+#import <ReactiveObjC.h>
+#import <Aspects.h>
 
 #import <SNTool.h>
 

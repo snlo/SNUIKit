@@ -326,8 +326,8 @@
 		5EB003A420A0AD33003E8AF8 /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
-				5EB003A520A0AD33003E8AF8 /* UIImageView+SNImageView.m */,
 				5EB003A620A0AD33003E8AF8 /* UIImageView+SNImageView.h */,
+				5EB003A520A0AD33003E8AF8 /* UIImageView+SNImageView.m */,
 			);
 			path = UIImageView;
 			sourceTree = "<group>";
@@ -335,8 +335,8 @@
 		5EB003A720A0AD33003E8AF8 /* UITableViewHeaderFooterView */ = {
 			isa = PBXGroup;
 			children = (
-				5EB003A820A0AD33003E8AF8 /* UITableViewHeaderFooterView+SNHeaderFooterView.m */,
 				5EB003A920A0AD33003E8AF8 /* UITableViewHeaderFooterView+SNHeaderFooterView.h */,
+				5EB003A820A0AD33003E8AF8 /* UITableViewHeaderFooterView+SNHeaderFooterView.m */,
 			);
 			path = UITableViewHeaderFooterView;
 			sourceTree = "<group>";
@@ -344,8 +344,8 @@
 		5EB003AA20A0AD34003E8AF8 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				5EB003AB20A0AD34003E8AF8 /* UITableViewCell+SNCell.m */,
 				5EB003AC20A0AD34003E8AF8 /* UITableViewCell+SNCell.h */,
+				5EB003AB20A0AD34003E8AF8 /* UITableViewCell+SNCell.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -380,8 +380,8 @@
 		5EB003B720A0AD34003E8AF8 /* UITextView */ = {
 			isa = PBXGroup;
 			children = (
-				5EB003B820A0AD34003E8AF8 /* UITextView+SNTextView.m */,
 				5EB003B920A0AD34003E8AF8 /* UITextView+SNTextView.h */,
+				5EB003B820A0AD34003E8AF8 /* UITextView+SNTextView.m */,
 			);
 			path = UITextView;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = snloveydus;
+				ORGANIZATIONNAME = snlo;
 				TargetAttributes = {
 					5EB0034520A0AA9F003E8AF8 = {
 						CreatedOnToolsVersion = 9.3;

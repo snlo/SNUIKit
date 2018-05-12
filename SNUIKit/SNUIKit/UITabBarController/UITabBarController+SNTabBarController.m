@@ -1,9 +1,9 @@
 //
 //  UITabBarController+SNTabBarController.m
-//  AiteCube
+//  snlo
 //
 //  Created by snlo on 2017/11/3.
-//  Copyright © 2017年 AiteCube. All rights reserved.
+//  Copyright © 2017年 snlo. All rights reserved.
 //
 
 #import "UITabBarController+SNTabBarController.h"

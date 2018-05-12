@@ -10,6 +10,8 @@ target 'SNUIKit' do
   pod 'Masonry'
   pod 'ReactiveObjC'
   pod 'Aspects'
+  
+  pod 'SNTool'
 
   target 'SNUIKitTests' do
     inherit! :search_paths

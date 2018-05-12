@@ -101,8 +101,8 @@
 #pragma mark -- private methods
 
 - (void)configureTabbrItemTitle:(NSString *)title pages:(int)pages imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
-	self.sn_tabBarController.tabBar.items[pages].image = [SNUIKIT_IMAGE_NAMED(imageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; //蓝色BUG
-	self.sn_tabBarController.tabBar.items[pages].selectedImage = [SNUIKIT_IMAGE_NAMED(selectedImageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+	self.sn_tabBarController.tabBar.items[pages].image = [IMAGE_NAMED(imageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; //蓝色BUG
+	self.sn_tabBarController.tabBar.items[pages].selectedImage = [IMAGE_NAMED(selectedImageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 	self.sn_tabBarController.tabBar.items[pages].title = title;
 }
 

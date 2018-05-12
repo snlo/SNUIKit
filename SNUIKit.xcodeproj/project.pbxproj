@@ -35,6 +35,7 @@
 		5EB003D220A0AD34003E8AF8 /* UITextView+SNTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB003B820A0AD34003E8AF8 /* UITextView+SNTextView.m */; };
 		5EB003D820A0AE21003E8AF8 /* SNUIKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB003D720A0AE21003E8AF8 /* SNUIKitTool.m */; };
 		5EB0047520A11055003E8AF8 /* SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0047420A11055003E8AF8 /* SNUIKit.m */; };
+		5ED6AAC520A65C0900128667 /* SNUIKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5ED6AAC420A65C0900128667 /* SNUIKit.bundle */; };
 		786C635BD3669ACE445B99F1 /* libPods-SNUIKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89532C7FD41E7E44A9446D48 /* libPods-SNUIKitTests.a */; };
 		F1509A34FE747AAB1CD5F152 /* libPods-SNUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA55CDF3ACC71ABB881AA85 /* libPods-SNUIKit.a */; };
 /* End PBXBuildFile section */
@@ -113,6 +114,9 @@
 		5EB003D720A0AE21003E8AF8 /* SNUIKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNUIKitTool.m; sourceTree = "<group>"; };
 		5EB0047320A11055003E8AF8 /* SNUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNUIKit.h; sourceTree = "<group>"; };
 		5EB0047420A11055003E8AF8 /* SNUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNUIKit.m; sourceTree = "<group>"; };
+		5ED6AAC420A65C0900128667 /* SNUIKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SNUIKit.bundle; sourceTree = "<group>"; };
+		5ED6AAC820A65C3800128667 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		5ED6AAC920A65C3800128667 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		6890C92970C27A2869971FE9 /* Pods-SNUIKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNUIKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNUIKitUITests/Pods-SNUIKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		709D30A884D74CF8794A6A26 /* Pods-SNUIKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNUIKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNUIKitTests/Pods-SNUIKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		810FEB3B5324D087A6FEAA71 /* Pods-SNUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNUIKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNUIKit/Pods-SNUIKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				5EB003B720A0AD34003E8AF8 /* UITextView */,
 				5EB0039120A0AD33003E8AF8 /* UIView */,
 				5EB0038E20A0AD33003E8AF8 /* UIViewController */,
+				5ED6AAC420A65C0900128667 /* SNUIKit.bundle */,
 			);
 			path = SNUIKit;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				5EB0034220A0AA9F003E8AF8 /* Sources */,
 				5EB0034320A0AA9F003E8AF8 /* Frameworks */,
 				5EB0034420A0AA9F003E8AF8 /* Resources */,
+				06E695164D000A643F21C2D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -479,6 +485,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 5EB0033D20A0AA9F003E8AF8;
 			productRefGroup = 5EB0034720A0AA9F003E8AF8 /* Products */;
@@ -498,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB0035620A0AAA0003E8AF8 /* LaunchScreen.storyboard in Resources */,
+				5ED6AAC520A65C0900128667 /* SNUIKit.bundle in Resources */,
 				5EB0035320A0AAA0003E8AF8 /* Assets.xcassets in Resources */,
 				5EB0035120A0AA9F003E8AF8 /* Main.storyboard in Resources */,
 			);
@@ -520,6 +528,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06E695164D000A643F21C2D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources.sh",
+				"${PODS_ROOT}/SNTool/SNTool/SNTool/SNTool.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SNTool.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2366889E4B0A64AA7139F030 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,6 +668,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5EB0035020A0AA9F003E8AF8 /* Base */,
+				5ED6AAC820A65C3800128667 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -650,6 +677,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5EB0035520A0AAA0003E8AF8 /* Base */,
+				5ED6AAC920A65C3800128667 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -661,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -719,6 +748,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -256,7 +256,7 @@
 	} else {
 		if (self.presentingViewController) {
 			[self dismissViewControllerAnimated:animated completion:^{
-				[[SNUIKitTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
+				[[SNTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
 			}];
 		} else {
 			[tempController pushViewController:shouldViewController animated:animated];
@@ -295,20 +295,20 @@
 			
 		} else {
 			[self dismissViewControllerAnimated:animated completion:^{
-				[[SNUIKitTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
+				[[SNTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
 			}];
 		}
 		if (_isErrorSign) {
 			
 			if (self.presentingViewController) {
 				[self dismissViewControllerAnimated:animated completion:^{
-					[[SNUIKitTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
+					[[SNTool topViewController] sn_popToViewControllerWithName:viewControllerName estimatedTabBarSelectedIndex:selectedIndex animated:animated];
 				}];
 			} else {
-				if ([SNUIKitTool topViewController].navigationController) {
-					[[SNUIKitTool topViewController].navigationController pushViewController:shouldViewController animated:animated];
+				if ([SNTool topViewController].navigationController) {
+					[[SNTool topViewController].navigationController pushViewController:shouldViewController animated:animated];
 				} else {
-					[[SNUIKitTool topViewController] presentViewController:shouldViewController animated:animated completion:^{
+					[[SNTool topViewController] presentViewController:shouldViewController animated:animated completion:^{
 						
 					}];
 				}

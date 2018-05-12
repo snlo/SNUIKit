@@ -63,11 +63,11 @@
 - (void)sn_tabBarHidden:(BOOL)hidden {
 	if (hidden) {
 		[UIView animateWithDuration:0.3 animations:^{
-			self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, SNUIKIT_SCREEN_HEIGHT, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
+			self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, SCREEN_HEIGHT, self.tabBar.frame.size.width, self.tabBar.frame.size.height);
 		}];
 	} else {
 		[UIView animateWithDuration:0.3 animations:^{
-			self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, SNUIKIT_SCREEN_HEIGHT - [SNUIKitTool tabbarHeight], self.tabBar.frame.size.width, self.tabBar.frame.size.height);
+			self.tabBar.frame = CGRectMake(self.tabBar.frame.origin.x, SCREEN_HEIGHT - [SNTool tabbarHeight], self.tabBar.frame.size.width, self.tabBar.frame.size.height);
 		}];
 	}
 }

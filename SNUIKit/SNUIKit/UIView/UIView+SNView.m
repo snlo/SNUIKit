@@ -24,6 +24,9 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
 
 + (instancetype)sn_viewWithNib {
     UIView * view = [[UIView alloc] init];
+    if ([NSStringFromClass([self class]) isEqualToString:@"UIView"]) {
+        return view;
+    }
     view = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
     return view;
 }

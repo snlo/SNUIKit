@@ -55,7 +55,7 @@
     UIView * view = objc_getAssociatedObject(self, _cmd);
     if (view == nil) {
         
-        view = [UIView sn_viewWithNib];
+        view = [UIView new];
         view.frame = self.frame;
         
         [self insertSubview:view aboveSubview:self.subviews.lastObject];

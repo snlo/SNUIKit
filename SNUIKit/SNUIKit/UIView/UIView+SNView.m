@@ -90,6 +90,17 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
     return objc_getAssociatedObject(self, _cmd);
 }
 
+#pragma 旋转角度
+- (void)setSn_rotationAngle:(CGFloat)sn_rotationAngle {
+    self.transform = CGAffineTransformMakeRotation(M_PI * (sn_rotationAngle/360) );
+    NSNumber * number = [NSNumber numberWithFloat:sn_rotationAngle];
+    objc_setAssociatedObject(self, @selector(sn_rotationAngle), number, OBJC_ASSOCIATION_ASSIGN);
+}
+- (CGFloat)sn_rotationAngle {
+    NSNumber * number = objc_getAssociatedObject(self, _cmd);
+    return [number floatValue];
+}
+
 #pragma mark -- api
 - (void)sn_reloadBlock:(void(^)(RACSubject * commandReload))block {
     if (block) {

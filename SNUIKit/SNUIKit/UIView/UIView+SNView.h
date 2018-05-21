@@ -43,6 +43,11 @@
 @property (nonatomic, copy) IBInspectable UIColor * sn_borderColor;
 
 /**
+ 旋转角度
+ */
+@property (nonatomic, assign) IBInspectable CGFloat sn_rotationAngle;
+
+/**
  失败视图
  */
 @property (nonatomic, readonly) UIView * sn_viewFailed;

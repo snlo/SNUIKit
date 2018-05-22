@@ -119,4 +119,44 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
     return objc_getAssociatedObject(self, _cmd);
 }
 
+#pragma mark -- 命中扩展
++ (void)load {
+    Swizzle(self, @selector(pointInside:withEvent:), @selector(myPointInside:withEvent:));
+}
+- (BOOL)myPointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    //    if (UIEdgeInsetsEqualToEdgeInsets(self.hitTestEdgeInsets, UIEdgeInsetsZero)
+    //       || self.hidden
+    //       || ([self isKindOfClass:UIControl.class] && !((UIControl*)self).enabled))
+    //    {
+    //        UIControl * control = (UIControl *)self;
+    //        return [control.superview pointInside:point withEvent:event]; // original implementation
+    //    }
+    
+    return CGRectContainsPoint(UIEdgeInsetsInsetRect(self.bounds, self.sn_hitEdgeInsets), point);
+}
+- (void)setSn_hitEdgeInsets:(UIEdgeInsets)sn_hitEdgeInsets {
+    objc_setAssociatedObject(self, @selector(sn_hitEdgeInsets), [NSValue valueWithUIEdgeInsets:sn_hitEdgeInsets], OBJC_ASSOCIATION_RETAIN);
+}
+- (UIEdgeInsets)sn_hitEdgeInsets {
+    NSValue *value = objc_getAssociatedObject(self, _cmd);
+    if(value) {
+        UIEdgeInsets edgeInsets;
+        [value getValue:&edgeInsets];
+        return edgeInsets;
+    } else {
+        return UIEdgeInsetsZero;
+    }
+}
+void Swizzle(Class c, SEL orig, SEL new) {
+    
+    Method origMethod = class_getInstanceMethod(c, orig);
+    Method newMethod = class_getInstanceMethod(c, new);
+    
+    if(class_addMethod(c, orig, method_getImplementation(newMethod), method_getTypeEncoding(newMethod)))
+        class_replaceMethod(c, new, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+    else
+        method_exchangeImplementations(origMethod, newMethod);
+}
+
+
 @end

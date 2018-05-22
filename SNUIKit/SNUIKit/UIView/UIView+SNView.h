@@ -62,6 +62,9 @@
  */
 @property (nonatomic, readonly) UIView * sn_viewEmpty;
 
-
+/**
+ 命中边缘，负数为扩大
+ */
+@property(nonatomic) UIEdgeInsets sn_hitEdgeInsets;
 
 @end

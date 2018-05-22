@@ -47,10 +47,7 @@
  */
 @property (nonatomic, assign) IBInspectable CGFloat sn_rotationAngle;
 
-/**
- 失败视图
- */
-@property (nonatomic, readonly) UIView * sn_viewFailed;
+
 
 /**
  重新加载
@@ -58,9 +55,19 @@
 - (void)sn_reloadBlock:(void(^)(RACSubject * commandReload))block;
 
 /**
- 空载视图
+ 空载视图，需自定义在分类中
  */
 @property (nonatomic, readonly) UIView * sn_viewEmpty;
+
+/**
+ 失败视图，需自定义在分类中
+ */
+@property (nonatomic, readonly) UIView * sn_viewFailed;
+
+/**
+ tableview的空数据视图，需自定义在分类中
+ */
+@property (nonatomic, readonly) UIView * sn_viewNoMoreData;
 
 /**
  命中边缘，负数为扩大

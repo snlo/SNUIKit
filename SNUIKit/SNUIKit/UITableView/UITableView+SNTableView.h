@@ -15,8 +15,6 @@
  */
 @property (nonatomic, strong) NSMutableArray * sn_dataSource;
 
-@property (nonatomic, readonly) UIView * sn_viewNoMoreData;
-
 /**
  设置动态 scrollEnabled 属性
  */

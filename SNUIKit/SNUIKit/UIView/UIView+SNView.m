@@ -121,10 +121,7 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
 }
 
 #pragma mark -- 命中扩展
-+ (void)load {
-    Swizzle(self, @selector(pointInside:withEvent:), @selector(myPointInside:withEvent:));
-}
-- (BOOL)myPointInside:(CGPoint)point withEvent:(UIEvent *)event {
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
     //    if (UIEdgeInsetsEqualToEdgeInsets(self.hitTestEdgeInsets, UIEdgeInsetsZero)
     //       || self.hidden
     //       || ([self isKindOfClass:UIControl.class] && !((UIControl*)self).enabled))

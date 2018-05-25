@@ -642,7 +642,6 @@ static id instanse;
     } else {
         return kTabbarHeight;
     }
-    
 }
 
 + (CGFloat)navigationBarHeight {

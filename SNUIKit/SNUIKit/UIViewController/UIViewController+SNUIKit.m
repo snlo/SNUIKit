@@ -101,7 +101,7 @@
 	}
     
     [RACObserve(self.sn_navigationController.navigationBar, hidden) subscribeNext:^(id  _Nullable x) {
-        if (x) {
+        if (self.sn_navigationController.navigationBar.hidden) {
             [self sn_autoStatusBarStyle];
         }
     }];

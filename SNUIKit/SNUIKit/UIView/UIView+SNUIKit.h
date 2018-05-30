@@ -70,6 +70,11 @@
 @property (nonatomic, readonly) UIView * sn_viewNoMoreData;
 
 /**
+ 加载等待视图，需自定义在分类中
+ */
+@property (nonatomic, readonly) UIView * sn_viewLoading;
+
+/**
  命中边缘，负数为扩大
  */
 @property(nonatomic) UIEdgeInsets sn_hitEdgeInsets;

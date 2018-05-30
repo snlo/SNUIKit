@@ -16,6 +16,7 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
 @property (nonatomic, strong) UIView * sn_viewFailed;
 @property (nonatomic, strong) UIView * sn_viewEmpty;
 @property (nonatomic, strong) UIView * sn_viewNoMoreData;
+@property (nonatomic, strong) UIView * sn_viewLoading;
 
 @property (nonatomic, copy) ReloadBlock reloadBlock;
 

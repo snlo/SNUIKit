@@ -10,6 +10,8 @@
 
 #import "SNUIKit.h"
 
+#import "TestViewController.h"
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIView *viewCenter;
@@ -55,9 +57,6 @@
     
     
     
-    
-    
-    
     [[self.R rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
         self.sn_navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
         self.labelR.text = SNString(@"R:%f",self.R.value);
@@ -93,17 +92,19 @@
 
 - (IBAction)handleButton:(UIButton *)sender {
     
-    if (sender.selected) {
-        sender.selected = NO;
-//        [self sn_setNavigationbarHidden:YES animationComeBack:YES];
-        self.sn_navigationController.navigationBar.hidden = YES;
-    } else {
-        sender.selected = YES;
-//        [self sn_setNavigationbarHidden:NO animationComeBack:NO];
-        self.sn_navigationController.navigationBar.hidden = NO;
-    }
+//    if (sender.selected) {
+//        sender.selected = NO;
+////        [self sn_setNavigationbarHidden:YES animationComeBack:YES];
+//        self.sn_navigationController.navigationBar.hidden = YES;
+//    } else {
+//        sender.selected = YES;
+////        [self sn_setNavigationbarHidden:NO animationComeBack:NO];
+//        self.sn_navigationController.navigationBar.hidden = NO;
+//    }
 
+    TestViewController * VC = [[TestViewController alloc] init];
     
+    [self.navigationController pushViewController:VC animated:YES];
     
 }
 

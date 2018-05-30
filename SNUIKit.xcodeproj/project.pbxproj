@@ -41,6 +41,8 @@
 		983CE51620B7DB53007987FD /* UIColor+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 983CE51520B7DB53007987FD /* UIColor+SNUIKit.m */; };
 		983CE51C20B7E4ED007987FD /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983CE51B20B7E4ED007987FD /* IOSurface.framework */; };
 		983CE51E20B7FEB0007987FD /* rrrrrr.png in Resources */ = {isa = PBXBuildFile; fileRef = 983CE51D20B7FEB0007987FD /* rrrrrr.png */; };
+		98D429E220BCEF870081752B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D429E120BCEF870081752B /* TestViewController.m */; };
+		98D429E420BCEF910081752B /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D429E320BCEF910081752B /* TestViewController.xib */; };
 		F1509A34FE747AAB1CD5F152 /* libPods-SNUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA55CDF3ACC71ABB881AA85 /* libPods-SNUIKit.a */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +134,9 @@
 		983CE51520B7DB53007987FD /* UIColor+SNUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SNUIKit.m"; sourceTree = "<group>"; };
 		983CE51B20B7E4ED007987FD /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		983CE51D20B7FEB0007987FD /* rrrrrr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rrrrrr.png; sourceTree = "<group>"; };
+		98D429E020BCEF870081752B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		98D429E120BCEF870081752B /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		98D429E320BCEF910081752B /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +210,9 @@
 				5EB0034A20A0AA9F003E8AF8 /* AppDelegate.m */,
 				5EB0034C20A0AA9F003E8AF8 /* ViewController.h */,
 				5EB0034D20A0AA9F003E8AF8 /* ViewController.m */,
+				98D429E020BCEF870081752B /* TestViewController.h */,
+				98D429E120BCEF870081752B /* TestViewController.m */,
+				98D429E320BCEF910081752B /* TestViewController.xib */,
 				983CE51D20B7FEB0007987FD /* rrrrrr.png */,
 				5EB0037B20A0AC0B003E8AF8 /* SNUIKit */,
 				5EB0034F20A0AA9F003E8AF8 /* Main.storyboard */,
@@ -541,6 +549,7 @@
 				983CE51E20B7FEB0007987FD /* rrrrrr.png in Resources */,
 				5ED6AAC520A65C0900128667 /* SNUIKit.bundle in Resources */,
 				5EB0035320A0AAA0003E8AF8 /* Assets.xcassets in Resources */,
+				98D429E420BCEF910081752B /* TestViewController.xib in Resources */,
 				5EB0035120A0AA9F003E8AF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,6 +664,7 @@
 				983CE51620B7DB53007987FD /* UIColor+SNUIKit.m in Sources */,
 				5EB003C620A0AD34003E8AF8 /* UITableViewCell+SNUIKit.m in Sources */,
 				5EB003C220A0AD34003E8AF8 /* UITextField+SNUIKit.m in Sources */,
+				98D429E220BCEF870081752B /* TestViewController.m in Sources */,
 				5EB0035920A0AAA0003E8AF8 /* main.m in Sources */,
 				983CE50D20B7AE73007987FD /* UIImage+SNUIKit.m in Sources */,
 				5EB003D820A0AE21003E8AF8 /* SNUIKitTool.m in Sources */,

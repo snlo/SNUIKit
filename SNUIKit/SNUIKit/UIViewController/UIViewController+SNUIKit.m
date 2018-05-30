@@ -97,7 +97,8 @@
 	
 	//导航栏按钮
 	if (self.sn_navigationController.viewControllers.count > 1) {
-        [[self sn_setLeftBarbuttonItemImage:[UIImage imageNamed:@"public_return"] target:self action:@selector(hansleBackBarbuttonItem:)] setTintColor:COLOR_MAIN];
+		
+        [[self sn_setLeftBarbuttonItemImage:[UIImage imageNamed:@"SNUIKit.bundle/SNUIKitButtonBarArrowLeft"] target:self action:@selector(hansleBackBarbuttonItem:)] setTintColor:COLOR_MAIN];
 	}
     
     [RACObserve(self.sn_navigationController.navigationBar, hidden) subscribeNext:^(id  _Nullable x) {

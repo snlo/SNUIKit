@@ -129,6 +129,8 @@
 - (void)configureDataSource {
     
     [self updateDataSource];
+	
+	NSLog(@"%@",IMAGE_PNG(@"SNUIKitButtonBarArrowLeft"));
     
 }
 - (void)updateDataSource {

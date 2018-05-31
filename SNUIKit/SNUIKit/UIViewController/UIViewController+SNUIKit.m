@@ -332,12 +332,20 @@
 }
 
 - (void)sn_autoStatusBarStyle {
-    UIImage * image = [UIImage sn_snapshotFrom:CGRectMake(0, 0, SCREEN_WIDTH, [UIApplication sharedApplication].statusBarFrame.size.height)];
-    [UIColor sn_grayColor:[image sn_mostColor] dark:^(CGFloat gray) {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-    } light:^(CGFloat gray) {
-        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        CGSize size = CGSizeMake(SCREEN_WIDTH, [UIApplication sharedApplication].statusBarFrame.size.height);
+        UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        [UIColor sn_grayColor:[image sn_mostColor] dark:^(CGFloat gray) {
+            [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+        } light:^(CGFloat gray) {
+            [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+        }];
+    });
 }
 
 @end

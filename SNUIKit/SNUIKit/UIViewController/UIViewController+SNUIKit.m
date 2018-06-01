@@ -100,17 +100,16 @@
 		
         [[self sn_setLeftBarbuttonItemImage:[UIImage imageNamed:@"SNUIKit.bundle/SNUIKitButtonBarArrowLeft"] target:self action:@selector(hansleBackBarbuttonItem:)] setTintColor:COLOR_MAIN];
 	}
-    
-    [RACObserve(self.sn_navigationController.navigationBar, hidden) subscribeNext:^(id  _Nullable x) {
-        if (self.sn_navigationController.navigationBar.hidden) {
-            [self sn_autoStatusBarStyle];
-        }
-    }];
 }
 - (void)viewDidAppear:(BOOL)animated {
-    if (!self.sn_navigationController.navigationBar || self.sn_navigationController.navigationBar.hidden) {
-        [self sn_autoStatusBarStyle];
-    }
+	if (!self.sn_navigationController.navigationBar) {
+		[self sn_autoStatusBarStyle];
+	}
+	[RACObserve(self.sn_navigationController.navigationBar, hidden) subscribeNext:^(id  _Nullable x) {
+		if (self.sn_navigationController.navigationBar.hidden) {
+			[self sn_autoStatusBarStyle];
+		}
+	}];
 }
 #pragma clang diagnostic pop
 
@@ -332,20 +331,32 @@
 }
 
 - (void)sn_autoStatusBarStyle {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        CGSize size = CGSizeMake(SCREEN_WIDTH, [UIApplication sharedApplication].statusBarFrame.size.height);
-        UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        [self.view.layer renderInContext:context];
-        UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        
-        [UIColor sn_grayColor:[image sn_mostColor] dark:^(CGFloat gray) {
-            [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-        } light:^(CGFloat gray) {
-            [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-        }];
-    });
+	dispatch_async(dispatch_get_main_queue(), ^{
+		UIView * view = self.view;
+		__block NSMutableArray * viewArray = [NSMutableArray array];
+		[self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+			if (obj.frame.origin.x >= 0 && obj.frame.origin.x <= SCREEN_WIDTH/2) {
+				if (obj.frame.origin.y >= 0 && obj.frame.origin.y <= kStatusBarAndNavigationBarHeight - 44) {
+					if (obj.frame.size.width > SCREEN_WIDTH/2 && obj.frame.size.height >= 20) {
+						[viewArray addObject:obj];
+					}
+				}
+			}
+		}];
+		view = viewArray.lastObject;
+		CGSize size = CGSizeMake(SCREEN_WIDTH, [UIApplication sharedApplication].statusBarFrame.size.height);
+		UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+		CGContextRef context = UIGraphicsGetCurrentContext();
+		[view.layer renderInContext:context];
+		UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		[UIColor sn_grayColor:[image sn_mostColor] dark:^(CGFloat gray) {
+			[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+		} light:^(CGFloat gray) {
+			[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+		}];
+	});
 }
 
 @end

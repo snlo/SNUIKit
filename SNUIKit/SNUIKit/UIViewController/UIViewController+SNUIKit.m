@@ -331,6 +331,7 @@
 }
 
 - (void)sn_autoStatusBarStyle {
+    return;
 	dispatch_async(dispatch_get_main_queue(), ^{
 		UIView * view = self.view;
 		__block NSMutableArray * viewArray = [NSMutableArray array];

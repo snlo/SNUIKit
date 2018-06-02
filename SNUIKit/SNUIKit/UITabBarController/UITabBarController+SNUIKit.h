@@ -38,5 +38,10 @@
  */
 - (void)sn_tabBarHidden:(BOOL)hidden;
 
+/**
+ 预加载 viewControllers
+ */
+- (void)sn_loadViewsIfNeeded;
+
 @end
 

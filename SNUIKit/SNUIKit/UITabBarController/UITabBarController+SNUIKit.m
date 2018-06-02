@@ -72,4 +72,14 @@
 	}
 }
 
+- (void)sn_loadViewsIfNeeded {
+    for(UIViewController *viewController in  self.viewControllers){
+        if ([viewController respondsToSelector:NSSelectorFromString(@"loadViewIfNeeded")]) {
+            [viewController loadViewIfNeeded];
+        } else {
+            [viewController view];
+        }
+    }
+}
+
 @end

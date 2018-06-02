@@ -70,6 +70,6 @@
 /**
  动态设置状态栏的风格，记得在info.plist中设置‘View controller-based status bar appearance’为‘NO’
  */
-- (void)sn_autoStatusBarStyle;
+- (void)sn_autoStatusBarStyle __attribute__((deprecated("Have been abolished.")));
 
 @end

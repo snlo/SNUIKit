@@ -41,6 +41,7 @@
 		983CE51620B7DB53007987FD /* UIColor+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 983CE51520B7DB53007987FD /* UIColor+SNUIKit.m */; };
 		983CE51C20B7E4ED007987FD /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983CE51B20B7E4ED007987FD /* IOSurface.framework */; };
 		983CE51E20B7FEB0007987FD /* rrrrrr.png in Resources */ = {isa = PBXBuildFile; fileRef = 983CE51D20B7FEB0007987FD /* rrrrrr.png */; };
+		98A515FD20E71EBC00F69E85 /* UITabBar+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A515FC20E71EBC00F69E85 /* UITabBar+SNUIKit.m */; };
 		98D429E220BCEF870081752B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D429E120BCEF870081752B /* TestViewController.m */; };
 		98D429E420BCEF910081752B /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98D429E320BCEF910081752B /* TestViewController.xib */; };
 		F1509A34FE747AAB1CD5F152 /* libPods-SNUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA55CDF3ACC71ABB881AA85 /* libPods-SNUIKit.a */; };
@@ -134,6 +135,8 @@
 		983CE51520B7DB53007987FD /* UIColor+SNUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SNUIKit.m"; sourceTree = "<group>"; };
 		983CE51B20B7E4ED007987FD /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		983CE51D20B7FEB0007987FD /* rrrrrr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rrrrrr.png; sourceTree = "<group>"; };
+		98A515FB20E71EBC00F69E85 /* UITabBar+SNUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+SNUIKit.h"; sourceTree = "<group>"; };
+		98A515FC20E71EBC00F69E85 /* UITabBar+SNUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+SNUIKit.m"; sourceTree = "<group>"; };
 		98D429E020BCEF870081752B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		98D429E120BCEF870081752B /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		98D429E320BCEF910081752B /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 				5EB0047420A11055003E8AF8 /* SNUIKit.m */,
 				5EB003D620A0AE21003E8AF8 /* SNUIKitTool.h */,
 				5EB003D720A0AE21003E8AF8 /* SNUIKitTool.m */,
+				98A515FA20E71E7B00F69E85 /* UITabBar */,
 				983CE51320B7DB38007987FD /* UIColor */,
 				983CE50A20B7AE3D007987FD /* UIImage */,
 				5EB003B420A0AD34003E8AF8 /* UIButton */,
@@ -435,6 +439,15 @@
 				983CE51520B7DB53007987FD /* UIColor+SNUIKit.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		98A515FA20E71E7B00F69E85 /* UITabBar */ = {
+			isa = PBXGroup;
+			children = (
+				98A515FB20E71EBC00F69E85 /* UITabBar+SNUIKit.h */,
+				98A515FC20E71EBC00F69E85 /* UITabBar+SNUIKit.m */,
+			);
+			path = UITabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,6 +680,7 @@
 				98D429E220BCEF870081752B /* TestViewController.m in Sources */,
 				5EB0035920A0AAA0003E8AF8 /* main.m in Sources */,
 				983CE50D20B7AE73007987FD /* UIImage+SNUIKit.m in Sources */,
+				98A515FD20E71EBC00F69E85 /* UITabBar+SNUIKit.m in Sources */,
 				5EB003D820A0AE21003E8AF8 /* SNUIKitTool.m in Sources */,
 				5EB0047520A11055003E8AF8 /* SNUIKit.m in Sources */,
 				5EB003CF20A0AD34003E8AF8 /* UITableView+SNUIKit.m in Sources */,

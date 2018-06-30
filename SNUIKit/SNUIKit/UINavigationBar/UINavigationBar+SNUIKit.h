@@ -16,6 +16,11 @@
 @property (nonatomic, strong) UIView * sn_overlay;
 
 /**
+ 左标题
+ */
+@property (nonatomic, strong) UILabel * sn_leftTitle;
+
+/**
  设置背景颜色
  */
 - (void)sn_setBackgroundColor:(UIColor *)backgroundColor;
@@ -29,5 +34,10 @@
  设置y轴位置
  */
 - (void)sn_setTranslationY:(CGFloat)translationY;
+
+/**
+ 设置大标题
+ */
+- (void)sn_setLargeTitlesPerfers:(BOOL)perfers LargeTitleTextAttributes:(NSDictionary<NSAttributedStringKey, id> *)attributes;
 
 @end

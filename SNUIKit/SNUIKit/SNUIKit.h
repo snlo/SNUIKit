@@ -20,6 +20,7 @@
 #import "UITableViewHeaderFooterView+SNUIKit.h"
 #import "UITableView+SNUIKit.h"
 #import "UINavigationBar+SNUIKit.h"
+#import "UITabBar+SNUIKit.h"
 #import "UICollectionViewCell+SNUIKit.h"
 #import "UIButton+SNUIKit.h"
 #import "UITabBarController+SNUIKit.h"

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 仅供参考，必要时可以删除
+ */
 @interface UIViewController (SNUIKit)
 
 /**

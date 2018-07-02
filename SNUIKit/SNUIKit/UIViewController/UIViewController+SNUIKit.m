@@ -77,30 +77,30 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
 	return self.sn_isAbleEdgeGesture; //    <UIGestureRecognizerDelegate>
 }
-- (void)viewDidLoad {
-#pragma mark -- 在这儿定制样式
-    [self sn_setNavigationbarHidden:NO animationComeBack:YES];
-	
-	//更新 navigation <- tabbarController 架构下navgationbar的标题
-    
-    if (self.tabBarController) {
-		[self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
-			self.tabBarController.navigationItem.title = self.title;
-		} error:NULL];
-	}
-	//设置导航栏背景色
-    self.sn_navigationBarColor = [UIColor whiteColor];
-//    self.view.backgroundColor = COLOR_BACK; //不能设置
-    
-    self.sn_navigationController.navigationBar.titleTextAttributes =
-    @{NSForegroundColorAttributeName:COLOR_MAIN};
-	
-	//导航栏按钮
-	if (self.sn_navigationController.viewControllers.count > 1) {
-		
-        [[self sn_setLeftBarbuttonItemImage:[UIImage imageNamed:@"SNUIKit.bundle/SNUIKitButtonBarArrowLeft"] target:self action:@selector(hansleBackBarbuttonItem:)] setTintColor:COLOR_MAIN];
-	}
-}
+//- (void)viewDidLoad {
+//#pragma mark -- 在这儿定制样式 仅供参考，可以自行实现该分类的这个方法
+//    [self sn_setNavigationbarHidden:NO animationComeBack:YES];
+//
+//    //更新 navigation <- tabbarController 架构下navgationbar的标题
+//
+//    if (self.tabBarController) {
+//        [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated) {
+//            self.tabBarController.navigationItem.title = self.title;
+//        } error:NULL];
+//    }
+//    //设置导航栏背景色
+//    self.sn_navigationBarColor = [UIColor whiteColor];
+////    self.view.backgroundColor = COLOR_BACK; //不能设置
+//
+//    self.sn_navigationController.navigationBar.titleTextAttributes =
+//    @{NSForegroundColorAttributeName:COLOR_MAIN};
+//
+//    //导航栏按钮
+//    if (self.sn_navigationController.viewControllers.count > 1) {
+//        
+//        [[self sn_setLeftBarbuttonItemImage:[UIImage imageNamed:@"SNUIKit.bundle/SNUIKitButtonBarArrowLeft"] target:self action:@selector(hansleBackBarbuttonItem:)] setTintColor:COLOR_MAIN];
+//    }
+//}
 - (void)viewDidAppear:(BOOL)animated {
 	if (!self.sn_navigationController.navigationBar) {
 		[self sn_autoStatusBarStyle];

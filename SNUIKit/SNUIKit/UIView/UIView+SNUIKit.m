@@ -36,7 +36,6 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
 - (void)setSn_showShadow:(BOOL)sn_showShadow {
     
     if (sn_showShadow) {
-        
         self.layer.shadowColor = self.sn_shadowColor.CGColor;
         
         self.layer.shadowOpacity = 1.0f;
@@ -44,6 +43,14 @@ typedef void(^ReloadBlock)(RACSubject * commanReload);
         self.layer.shadowOffset = CGSizeMake(0, 3);
         
         self.layer.shadowRadius = 4;
+    } else {
+        self.layer.shadowColor = [UIColor clearColor].CGColor;
+        
+        self.layer.shadowOpacity = 0.0f;
+        
+        self.layer.shadowOffset = CGSizeMake(0, 0);
+        
+        self.layer.shadowRadius = 0;
     }
     
     NSNumber * number = [NSNumber numberWithFloat:sn_showShadow];

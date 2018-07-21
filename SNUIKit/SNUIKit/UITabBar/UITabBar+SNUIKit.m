@@ -54,7 +54,7 @@
 }
 
 - (void)sn_systemSetBackgroundColor:(UIColor *)color {
-    self.translucent = NO;
+//    self.translucent = NO;
     self.barTintColor = color;
 }
 

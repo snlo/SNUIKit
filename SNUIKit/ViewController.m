@@ -37,6 +37,7 @@
 //	pod trunk push SNUIKit.podspec --verbose --allow-warnings --use-libraries
 	
     
+    
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] init];
     [self.view addGestureRecognizer:tap];
     
@@ -48,7 +49,6 @@
     }];
     
     self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"rrrrrr"].CGImage);
-    self.sn_navigationBarColor = [UIColor whiteColor];
     
     
     
@@ -58,19 +58,19 @@
     
     
     [[self.R rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        self.sn_navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
+        self.navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
         self.labelR.text = SNString(@"R:%f",self.R.value);
     }];
     [[self.G rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        self.sn_navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
+        self.navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
         self.labelG.text = SNString(@"G:%f",self.G.value);
     }];
     [[self.B rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        self.sn_navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
+        self.navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
         self.labelB.text = SNString(@"B:%f",self.B.value);
     }];
     [[self.A rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        self.sn_navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
+        self.navigationController.navigationBar.sn_overlay.backgroundColor = [UIColor colorWithRed:self.R.value/255.0f green:self.G.value/255.0f blue:self.B.value/255.0f alpha:self.A.value * 1.0f];
         self.labelA.text = SNString(@"A:%f",self.A.value);
     }];
 

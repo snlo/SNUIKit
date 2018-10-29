@@ -188,4 +188,38 @@ void Swizzle(Class c, SEL orig, SEL new) {
     return color;
 }
 
+#pragma mark -- 层级
+
+- (UIViewController *)viewContainingController {
+    UIResponder * nextResponder = self;
+    do {
+        nextResponder = [nextResponder nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+            return (UIViewController*)nextResponder;
+    } while (nextResponder);
+    return nil;
+}
+- (UIViewController *)topMostViewController {
+    NSMutableArray<UIViewController *> * controllersHierarchy = [[NSMutableArray alloc] init];
+    
+    UIViewController *topController = self.window.rootViewController;
+    
+    if (topController) {
+        [controllersHierarchy addObject:topController];
+    }
+    while ([topController presentedViewController]) {
+        topController = [topController presentedViewController];
+        [controllersHierarchy addObject:topController];
+    }
+    UIViewController * matchController = [self viewContainingController];
+    
+    while (matchController && [controllersHierarchy containsObject:matchController] == NO) {
+        do {
+            matchController = (UIViewController*)[matchController nextResponder];
+        } while (matchController && [matchController isKindOfClass:[UIViewController class]] == NO);
+    }
+    return matchController;
+}
+
+
 @end

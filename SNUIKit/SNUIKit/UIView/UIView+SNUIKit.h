@@ -84,4 +84,9 @@
  */
 - (UIColor *)sn_colorOfPoint:(CGPoint)point;
 
+/**
+ 在视图层级中返回最顶层的视图控制器
+ */
+- (UIViewController *)topMostViewController;
+
 @end

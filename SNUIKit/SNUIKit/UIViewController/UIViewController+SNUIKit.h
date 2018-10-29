@@ -8,53 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 仅供参考，必要时可以删除
- */
+
 @interface UIViewController (SNUIKit)
 
-/**
- 用于导航栏视图颜色的呈现
- */
-@property (nonatomic, strong) UIColor * sn_navigationBarColor;
-
-/**
- 包含了tabBarController.navigationController
- */
-@property (nonatomic, strong) UINavigationController * sn_navigationController;
-
-/**
- 包含了tabBarController.navigationItem
- */
-@property (nonatomic, strong) UINavigationItem * sn_navigationItem;
 
 /**
  有效边缘返回手势，设置为NO则禁止边缘返回，主要用于阻止无效的返回，只能在viewwillapper中实现
  */
 @property (nonatomic, assign) BOOL sn_isAbleEdgeGesture;
 
-/**
- 设置导航栏右边按钮
- */
-- (UIBarButtonItem *)sn_setRightBarbuttonItemTile:(NSString *)title target:(id)target action:(SEL)action;
-/**
- 设置导航栏右边按钮
- */
-- (UIBarButtonItem *)sn_setRightBarbuttonItemImage:(UIImage *)image target:(id)target action:(SEL)action;
-
-/**
- 设置导航栏左边按钮
- */
-- (UIBarButtonItem *)sn_setLeftBarbuttonItemTile:(NSString *)title target:(id)target action:(SEL)action;
-/**
- 设置导航栏左边按钮
- */
-- (UIBarButtonItem *)sn_setLeftBarbuttonItemImage:(UIImage *)image target:(id)target action:(SEL)action;
-
-/**
- 设置导航栏隐藏动画
- */
-- (void)sn_setNavigationbarHidden:(BOOL)hidden animationComeBack:(BOOL)animation;
 
 /**
  pop 到制定控制器

@@ -11,7 +11,7 @@
 @interface UITabBarController (SNUIKit)
 
 /**
- 设置分割线 下移 上移 偏移值
+ 设置分割线
  
  @param hidden 是否隐藏
  */

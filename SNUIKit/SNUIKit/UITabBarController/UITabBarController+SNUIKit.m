@@ -16,12 +16,6 @@
 
 @implementation UITabBarController (SNUIKit)
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self sn_setNavigationbarHidden:YES animationComeBack:YES];
-}
-
 - (void)sn_setSeparatorLineHidden:(BOOL)hidden {
 	[self.tabBar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
 		if (CGRectGetHeight(obj.bounds) < 1) {

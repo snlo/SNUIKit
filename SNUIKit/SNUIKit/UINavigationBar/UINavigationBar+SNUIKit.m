@@ -160,8 +160,6 @@
         if (attributes.count > 0) {
             [self setLargeTitleTextAttributes:attributes];
         }
-    } else {
-        
     }
 }
 

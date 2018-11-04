@@ -70,7 +70,7 @@
 }
 
 - (void)sn_setAutoScrollEnabled {
-	if (self.contentSize.height > CGRectGetHeight(self.bounds) - self.contentInset.top) {
+	if (self.contentSize.height > CGRectGetHeight(self.bounds) - self.contentInset.top - self.contentInset.bottom) {
 		self.scrollEnabled = YES;
 	} else { //sn_auto_scroll
 		self.scrollEnabled = NO;

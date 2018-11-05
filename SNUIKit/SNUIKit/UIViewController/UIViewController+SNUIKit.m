@@ -83,11 +83,12 @@
 
 
 - (void)setSn_isAbleEdgeGesture:(BOOL)sn_isAbleEdgeGesture {
-	objc_setAssociatedObject(self, @selector(sn_isAbleEdgeGesture), @(sn_isAbleEdgeGesture), OBJC_ASSOCIATION_ASSIGN);
+    NSNumber * number = [NSNumber numberWithBool:sn_isAbleEdgeGesture];
+    objc_setAssociatedObject(self, @selector(sn_isAbleEdgeGesture), number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (BOOL)sn_isAbleEdgeGesture {
-	id sn_isAbleEdgeGesture = objc_getAssociatedObject(self, _cmd);
-	return sn_isAbleEdgeGesture ? [sn_isAbleEdgeGesture boolValue] : true;
+    NSNumber * number = objc_getAssociatedObject(self, _cmd);
+    return [number boolValue];
 }
 
 

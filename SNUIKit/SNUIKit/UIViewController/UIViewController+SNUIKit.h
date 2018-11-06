@@ -15,7 +15,7 @@
 /**
  有效边缘返回手势，设置为NO则禁止边缘返回，主要用于阻止无效的返回，只能在viewwillapper中实现
  */
-@property (nonatomic, assign) BOOL sn_isAbleEdgeGesture;
+@property (nonatomic, strong) NSNumber * sn_isAbleEdgeGesture;
 
 
 /**

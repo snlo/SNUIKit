@@ -41,20 +41,23 @@
 }
 
 - (void)SNUIKit_viewWillAppear:(BOOL)animated {
-    
+    if ([NSStringFromClass(self.class) hasPrefix:@"UI"] ||
+        [NSStringFromClass(self.class) hasPrefix:@"_UI"] ) {
+        return;
+    }
 	if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
 		self.navigationController.interactivePopGestureRecognizer.delegate = self;
 	}
 	
 	if ([self snuikit_navigationController].viewControllers.count < 2) {
-		self.sn_isAbleEdgeGesture = NO;
+		self.sn_isAbleEdgeGesture = @(NO);
 	}
     [self SNUIKit_viewWillAppear:animated];
 }
 
 //解决多次触发navigation边缘返回手势后的冲突
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-	return self.sn_isAbleEdgeGesture; //    <UIGestureRecognizerDelegate>
+	return [self.sn_isAbleEdgeGesture boolValue]; //    <UIGestureRecognizerDelegate>
 }
 
 #pragma clang diagnostic pop
@@ -82,13 +85,16 @@
 }
 
 
-- (void)setSn_isAbleEdgeGesture:(BOOL)sn_isAbleEdgeGesture {
-    NSNumber * number = [NSNumber numberWithBool:sn_isAbleEdgeGesture];
-    objc_setAssociatedObject(self, @selector(sn_isAbleEdgeGesture), number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setSn_isAbleEdgeGesture:(NSNumber *)sn_isAbleEdgeGesture {
+    objc_setAssociatedObject(self, @selector(sn_isAbleEdgeGesture), sn_isAbleEdgeGesture, OBJC_ASSOCIATION_RETAIN);
 }
-- (BOOL)sn_isAbleEdgeGesture {
+- (NSNumber *)sn_isAbleEdgeGesture {
     NSNumber * number = objc_getAssociatedObject(self, _cmd);
-    return [number boolValue];
+    if (!number) {
+        number = [NSNumber numberWithBool:YES];
+        objc_setAssociatedObject(self, @selector(sn_isAbleEdgeGesture), number, OBJC_ASSOCIATION_RETAIN);
+    }
+    return number;
 }
 
 

@@ -30,12 +30,6 @@
 
 #pragma mark -- setter / getter
 - (void)setSn_dataSource:(NSMutableArray *)sn_dataSource {
-    if (sn_dataSource.count > 0) {
-        [self.sn_viewNoMoreData removeFromSuperview];
-        objc_setAssociatedObject(self, @selector(sn_viewNoMoreData), nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    } else { //表单数据为空的界面呈现
-        [self sn_viewNoMoreData];
-    }
     objc_setAssociatedObject(self, @selector(sn_dataSource), sn_dataSource, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSMutableArray *)sn_dataSource {
@@ -45,28 +39,6 @@
         objc_setAssociatedObject(self, _cmd, source, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return source;
-}
-
-
-- (void)setSn_viewNoMoreData:(UIView *)sn_viewNoMoreData {
-    objc_setAssociatedObject(self, @selector(sn_viewNoMoreData), sn_viewNoMoreData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (UIView *)sn_viewNoMoreData {
-    UIView * view = objc_getAssociatedObject(self, _cmd);
-    if (view == nil) {
-        
-        UIView * viewNoMoreData = [UIView new];
-        if ([viewNoMoreData respondsToSelector:@selector(setSn_viewNoMoreData:)]) {
-            view = viewNoMoreData.sn_viewNoMoreData;
-        } else {
-            view = [[UIView alloc] init];
-        }
-        view.frame = self.frame;
-        
-        [self insertSubview:view aboveSubview:self.subviews.lastObject];
-        
-        objc_setAssociatedObject(self, _cmd, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    } return view;
 }
 
 - (void)sn_setAutoScrollEnabled {

@@ -9,7 +9,7 @@
 #import "UIViewController+SNUIKit.h"
 
 #import <objc/runtime.h>
-#import <Aspects.h>
+#import <Aspects/Aspects.h>
 
 #import "SNUIKitTool.h"
 

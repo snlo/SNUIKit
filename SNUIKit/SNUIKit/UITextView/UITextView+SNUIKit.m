@@ -9,9 +9,9 @@
 #import "UITextView+SNUIKit.h"
 #import <objc/runtime.h>
 
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
 
-#import <ReactiveObjC.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 typedef void(^SNValueChnageBlock)(NSString * value);
 

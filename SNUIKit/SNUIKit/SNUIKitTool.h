@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import <Masonry.h>
-#import <ReactiveObjC.h>
-#import <Aspects.h>
+#import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <Aspects/Aspects.h>
 
-#import <SNTool.h>
+#import <SNTool/SNTool.h>
 
 singletonInterface(SNUIKitTool)
 

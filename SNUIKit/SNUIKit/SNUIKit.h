@@ -28,11 +28,11 @@
 #import "UITextField+SNUIKit.h"
 #import "UITableViewRowAction+SNUIKit.h"
 
-#import <Masonry.h>
-#import <ReactiveObjC.h>
-#import <Aspects.h>
+#import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <Aspects/Aspects.h>
 
-#import <SNTool.h>
+#import <SNTool/SNTool.h>
 
 @interface SNUIKit : NSObject
 

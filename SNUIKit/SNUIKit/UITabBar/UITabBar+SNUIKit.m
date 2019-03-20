@@ -9,7 +9,7 @@
 #import "UITabBar+SNUIKit.h"
 
 #import <objc/runtime.h>
-#import <ReactiveObjC.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import "SNUIKitTool.h"
 

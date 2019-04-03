@@ -589,17 +589,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources.sh",
-				"${PODS_ROOT}/SNTool/SNTool/SNTool/SNTool.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SNTool.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SNUIKit/Pods-SNUIKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2366889E4B0A64AA7139F030 /* [CP] Check Pods Manifest.lock */ = {

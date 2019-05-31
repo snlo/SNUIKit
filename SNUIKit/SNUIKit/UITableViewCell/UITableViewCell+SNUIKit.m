@@ -10,22 +10,22 @@
 
 @implementation UITableViewCell (SNUIKit)
 
-+ (instancetype)sn_nibCellWithTabelView:(UITableView *)tabelView indexPath:(NSIndexPath *)indexPath {
++ (instancetype)sn_nibCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
 	NSString * identifier = NSStringFromClass([self class]);
 	
-	[tabelView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
+	[tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
 	
-	UITableViewCell * cell = [tabelView dequeueReusableCellWithIdentifier:identifier];
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 
 	return cell;
 }
 
-+ (instancetype)sn_cellWithTabelView:(UITableView *)tabelView indexPath:(NSIndexPath *)indexPath {
++ (instancetype)sn_cellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
 	NSString * identifier = NSStringFromClass([self class]);
 	
-	[tabelView registerClass:self forCellReuseIdentifier:identifier];
+	[tableView registerClass:self forCellReuseIdentifier:identifier];
 	
-	UITableViewCell * cell = [tabelView dequeueReusableCellWithIdentifier:identifier];
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 
 	return cell;
 }

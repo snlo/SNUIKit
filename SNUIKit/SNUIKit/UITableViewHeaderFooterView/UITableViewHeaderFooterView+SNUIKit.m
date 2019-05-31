@@ -12,24 +12,24 @@
 
 @implementation UITableViewHeaderFooterView (SNUIKit)
 
-+ (instancetype)sn_nibHeaderFooterViewWithTabelView:(UITableView *)tabelView section:(NSUInteger)section {
++ (instancetype)sn_nibHeaderFooterViewWithTableView:(UITableView *)tableView section:(NSUInteger)section {
     
     NSString * identifier = NSStringFromClass([self class]);
     
-    [tabelView registerNib:[UINib nibWithNibName:identifier bundle:nil] forHeaderFooterViewReuseIdentifier:identifier];
+    [tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forHeaderFooterViewReuseIdentifier:identifier];
     
-    UITableViewHeaderFooterView * view = [tabelView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
+    UITableViewHeaderFooterView * view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
     
     return view;
 }
 
-+ (instancetype)sn_headerFooterViewWithTabelView:(UITableView *)tabelView section:(NSUInteger)section {
++ (instancetype)sn_headerFooterViewWithTableView:(UITableView *)tableView section:(NSUInteger)section {
     
     NSString * identifier = NSStringFromClass([self class]);
     
-    [tabelView registerClass:self forHeaderFooterViewReuseIdentifier:identifier];
+    [tableView registerClass:self forHeaderFooterViewReuseIdentifier:identifier];
     
-    UITableViewHeaderFooterView * view = [tabelView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
+    UITableViewHeaderFooterView * view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
     
     return view;
 }

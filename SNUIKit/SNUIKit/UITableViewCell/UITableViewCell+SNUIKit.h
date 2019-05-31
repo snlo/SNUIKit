@@ -13,12 +13,12 @@
 /**
  加载xib创建的cell
  */
-+ (instancetype)sn_nibCellWithTabelView:(UITableView *)tabelView indexPath:(NSIndexPath *)indexPath;
++ (instancetype)sn_nibCellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 /**
  加载非xib创建的cell
  */
-+ (instancetype)sn_cellWithTabelView:(UITableView *)tabelView indexPath:(NSIndexPath *)indexPath;
++ (instancetype)sn_cellWithTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 /**
  自己的tableview

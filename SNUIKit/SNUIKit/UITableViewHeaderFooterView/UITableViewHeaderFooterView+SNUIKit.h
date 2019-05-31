@@ -13,11 +13,11 @@
 /**
  加载xib创建的headerFooterView
  */
-+ (instancetype)sn_nibHeaderFooterViewWithTabelView:(UITableView *)tabelView section:(NSUInteger)section;
++ (instancetype)sn_nibHeaderFooterViewWithTableView:(UITableView *)tableView section:(NSUInteger)section;
 
 /**
  加载非xib创建的headerFooterView
  */
-+ (instancetype)sn_headerFooterViewWithTabelView:(UITableView *)tabelView section:(NSUInteger)section;
++ (instancetype)sn_headerFooterViewWithTableView:(UITableView *)tableView section:(NSUInteger)section;
 
 @end

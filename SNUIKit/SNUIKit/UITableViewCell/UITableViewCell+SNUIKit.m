@@ -15,7 +15,7 @@
 	
 	[tableView registerNib:[UINib nibWithNibName:identifier bundle:nil] forCellReuseIdentifier:identifier];
 	
-	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
 
 	return cell;
 }
@@ -25,7 +25,7 @@
 	
 	[tableView registerClass:self forCellReuseIdentifier:identifier];
 	
-	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
 
 	return cell;
 }

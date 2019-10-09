@@ -74,7 +74,12 @@
             //动态 statusBarStyle
             if (!self.hidden) {
                 [UIColor sn_grayColor:x dark:^(CGFloat gray) {
-                    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+                    if (@available(iOS 13.0, *)) {
+                        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDarkContent;
+                    } else {
+                        // Fallback on earlier versions
+                        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+                    }
                 } light:^(CGFloat gray) {
                     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
                 }];

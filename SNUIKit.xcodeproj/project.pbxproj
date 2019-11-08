@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,6 @@
 		5EB003C320A0AD34003E8AF8 /* UIViewController+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0038F20A0AD33003E8AF8 /* UIViewController+SNUIKit.m */; };
 		5EB003C420A0AD34003E8AF8 /* UIView+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039220A0AD33003E8AF8 /* UIView+SNUIKit.m */; };
 		5EB003C520A0AD34003E8AF8 /* UITableViewRowAction+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039520A0AD33003E8AF8 /* UITableViewRowAction+SNUIKit.m */; };
-		5EB003C620A0AD34003E8AF8 /* UITableViewCell+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039720A0AD33003E8AF8 /* UITableViewCell+SNUIKit.m */; };
 		5EB003C720A0AD34003E8AF8 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039820A0AD33003E8AF8 /* UITableViewRowAction.m */; };
 		5EB003C820A0AD34003E8AF8 /* UITabBarController+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039B20A0AD33003E8AF8 /* UITabBarController+SNUIKit.m */; };
 		5EB003C920A0AD34003E8AF8 /* UILabel+SNUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0039E20A0AD33003E8AF8 /* UILabel+SNUIKit.m */; };
@@ -95,7 +94,6 @@
 		5EB0039320A0AD33003E8AF8 /* UIView+SNUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SNUIKit.h"; sourceTree = "<group>"; };
 		5EB0039520A0AD33003E8AF8 /* UITableViewRowAction+SNUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+SNUIKit.m"; sourceTree = "<group>"; };
 		5EB0039620A0AD33003E8AF8 /* UITableViewRowAction+SNUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+SNUIKit.h"; sourceTree = "<group>"; };
-		5EB0039720A0AD33003E8AF8 /* UITableViewCell+SNUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+SNUIKit.m"; sourceTree = "<group>"; };
 		5EB0039820A0AD33003E8AF8 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
 		5EB0039A20A0AD33003E8AF8 /* UITabBarController+SNUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+SNUIKit.h"; sourceTree = "<group>"; };
 		5EB0039B20A0AD33003E8AF8 /* UITabBarController+SNUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+SNUIKit.m"; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 			children = (
 				5EB0039620A0AD33003E8AF8 /* UITableViewRowAction+SNUIKit.h */,
 				5EB0039520A0AD33003E8AF8 /* UITableViewRowAction+SNUIKit.m */,
-				5EB0039720A0AD33003E8AF8 /* UITableViewCell+SNUIKit.m */,
 				5EB0039820A0AD33003E8AF8 /* UITableViewRowAction.m */,
 			);
 			path = UITableViewRowAction;
@@ -674,7 +671,6 @@
 				5EB003C520A0AD34003E8AF8 /* UITableViewRowAction+SNUIKit.m in Sources */,
 				5EB003D220A0AD34003E8AF8 /* UITextView+SNUIKit.m in Sources */,
 				983CE51620B7DB53007987FD /* UIColor+SNUIKit.m in Sources */,
-				5EB003C620A0AD34003E8AF8 /* UITableViewCell+SNUIKit.m in Sources */,
 				5EB003C220A0AD34003E8AF8 /* UITextField+SNUIKit.m in Sources */,
 				98D429E220BCEF870081752B /* TestViewController.m in Sources */,
 				5EB0035920A0AAA0003E8AF8 /* main.m in Sources */,

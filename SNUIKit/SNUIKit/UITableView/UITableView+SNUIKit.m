@@ -23,7 +23,7 @@
 
 - (void)updateConstraints {
     
-    self.separatorColor = COLOR_SEPARATOR;
+//    self.separatorColor = COLOR_SEPARATOR;
     
     [super updateConstraints];
 }
